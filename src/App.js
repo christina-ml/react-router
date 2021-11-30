@@ -2,33 +2,47 @@ import React from "react";
 import { BrowserRouter as Router, Link, Switch, Route } from "react-router-dom";
 import './App.css';
 
-function TestComp(){
+// Home
+// Contact
+// About Us
+// Career
+// Blog
+
+function HomePage(){
   return (
-    <div>Test Component that's returning JSX</div>
+    <div>Our Home Page</div>
   )
 }
 
-function TestTwoComp(){
+function ContactPage(){
   return (
-    <div>Test 2 Component</div>
+    <div>Our Contact Page</div>
   )
 }
+
+function AboutUsPage(){
+  return(
+    <div>Our About Us Page</div>
+  )
+}
+
 
 function App(){
   return(
     <Router>
       <div>
         {/* Navbar */}
-        <Link to="/test">Test Link</Link>
-        <Link to="/test-two">Test 2 Link</Link>
+        <nav>
+          <Link to="/">Home</Link>
+        </nav>
 
         {/* Routes */}
         <Switch>
-          <Route path="/test">
-            <TestComp />
+          <Route exact path="/">
+            <HomePage />
           </Route>
-          <Route path="/test-two">
-            <TestTwoComp />
+          <Route path="/about">
+            <AboutUsPage />
           </Route>
         </Switch>
 
