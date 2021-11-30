@@ -10,19 +10,19 @@ import './App.css';
 
 function HomePage(){
   return (
-    <div>Our Home Page</div>
+    <div>The Home Page</div>
   )
 }
 
 function ContactPage(){
   return (
-    <div>Our Contact Page</div>
+    <div>The Contact Us Page</div>
   )
 }
 
 function AboutUsPage(){
   return(
-    <div>Our About Us Page</div>
+    <div>The About Us Page</div>
   )
 }
 
@@ -34,6 +34,8 @@ function App(){
         {/* Navbar */}
         <nav>
           <Link to="/">Home</Link>
+          <Link to="/about">About Us</Link>
+          <Link to="/contact">Contact Us</Link>
         </nav>
 
         {/* Routes */}
@@ -43,6 +45,9 @@ function App(){
           </Route>
           <Route path="/about">
             <AboutUsPage />
+          </Route>
+          <Route path="/contact">
+            <ContactPage />
           </Route>
         </Switch>
 
