@@ -1,0 +1,18 @@
+nav {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: black;
+    margin: 20px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 20px 10px;
+    transition: .3s;
+}
+
+nav a:hover {
+    background-color: rebeccapurple;
+}
